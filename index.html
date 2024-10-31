@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width= , initial-scale=1.0">
+    <title>TRIPS AROUND</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="container1">
+        <nav>
+            <div class="logo">
+                <img src="./images/logo.png" alt="logo">
+            </div>
+            <div class="searchbar">
+                <a href="#"><input type="search" name="search" id="search" placeholder="Search...."></a>
+                <i class="fa-solid fa-magnifying-glass"></i>
+            </div>
+            <div class="list-items">
+                <ul>
+                    <li> <a href="#destination">Destination</a></li>
+                    <li> <a href="#vacation">Vacation</a></li>
+                    <li> <a href="#aboutus">About Us</a></li>
+                    <li> <a href="#hostel">Hostels</a></li>
+                    <li> <a href="#">Flights</a></li>
+                    <li> <a href="#Collections">Collections</a></li>
+                </ul>
+            </div>
+            <div class="account"> 
+                <i class="fa-regular fa-user"></i>
+                <p>Account</p>
+            </div>
+        </nav>
+        <div class="text">
+            <h1>Don't be a Tourist, <br>be a Traveler.</h1>
+            <h3>AND LEARN THE BEST WAY TO DO IT</h3>
+            <button><a href="#">Learn more</a></button>
+        </div>
+    </div>
+    <div class="container2" id="destination">
+        <div class="text1">
+            <p>WHERE TO GO</p>
+            <h3>Popular Destinations</h3>
+        </div>
+        <div class="frame">
+            <div class="frame1">
+                <div class="place">
+                    <h3>Canada</h3>
+                    <p>Explore Now</p>
+                </div>
+            </div>
+            <div class="frame2">
+                <div class="place">
+                    <h3>Paris</h3>
+                    <p>Explore Now</p>
+                </div>
+            </div>
+            <div class="frame3">
+                <div class="place">
+                    <h3>Switzerland</h3>
+                    <p>Explore Now</p>
+                </div>
+            </div>
+            <div class="frame4">
+                <div class="place">
+                    <h3>South Korea</h3>
+                    <p>Explore Now</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container3" id="aboutus">
+        <img src="./images/corner.jpg" alt="">
+        <div class="frame2">
+            <div class="contant">
+                <p id="about">ABOUT US</p>
+                <h2>Travel to the any corner of the World</h2>
+                <p>Traveling to any corner of the world opens up endless possibilities for adventure, discovery, and personal growth. Whether you're wandering through bustling cities, hiking in remote mountains, or soaking in the tranquility of a hidden beach, each destination offers its own unique story.</p>
+                <button>Explore More</button>
+            </div>
+            <div class="rating">
+                <div class="social">
+                    <p>FACEBOOK</p>
+                    <h1>12.7 M</h1>
+                </div>
+                <div class="social">
+                    <p>INSTAGRAM</p>
+                    <h1>10.7 M</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container4" id="vacation">
+        <div class="frame1">
+            <div class="text1">
+                <p>WHERE TO GO</p>
+                <h3>Trending Vacation</h3>
+            </div>
+        </div>
+    
+        <div class="slide">
+            <div class="item1">
+                <div class="content">
+                    <div class="name">Switzerland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item2">
+                <div class="content">
+                    <div class="name">Finland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item3">
+                <div class="content">
+                    <div class="name">Iceland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item4">
+                <div class="content">
+                    <div class="name">Australia</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item5">
+                <div class="content">
+                    <div class="name">Netherlands</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+            <div class="item6">
+                <div class="content">
+                    <div class="name">Ireland</div>
+                    <div class="des">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab, eum!</div>
+                    <button>See More</button>
+                </div>
+            </div>
+        </div>
+        <div class="button">
+            <button class="prev"><i class="fa-solid fa-arrow-left"></i></button>
+            <button class="next"><i class="fa-solid fa-arrow-right"></i></button>
+        </div>
+    </div>
+    
+    <script>
+        const slides = document.querySelectorAll('.slide > div'); // All slides
+        const prevButton = document.querySelector('.prev'); // Previous button
+        const nextButton = document.querySelector('.next'); // Next button
+        let currentIndex = 0; // Track the current slide index
+    
+        function showSlides(index) {
+            // Hide all slides first
+            slides.forEach((slide, i) => {
+                slide.style.display = 'none';
+            });
+            
+            // Show the current and next slide
+            slides[index].style.display = 'block';
+            slides[(index + 1) % slides.length].style.display = 'block'; // Show the next one too
+        }
+    
+        // Initial display
+        showSlides(currentIndex);
+    
+        // Event listeners for navigation buttons
+        nextButton.addEventListener('click', () => {
+            currentIndex = (currentIndex + 1) % slides.length; // Increment index and loop back if needed
+            showSlides(currentIndex);
+        });
+    
+        prevButton.addEventListener('click', () => {
+            currentIndex = (currentIndex - 1 + slides.length) % slides.length; // Decrement index and loop back if needed
+            showSlides(currentIndex);
+        });
+    </script>  
+    <div class="container5" id="hostel">
+        <video src="./images/hostel.mp4" autoplay loop muted></video>
+        <div class="frame2">
+            <div class="contant1">
+                <p id="hotel">HOTELS</p>
+                <h2>People gaves us lot's of appreciation</h2>
+            </div>
+            <div class="contant2">
+                <div class="para">
+                    <p>"Your appreciation fuels our passion for hospitality". Thank you for choosing us and for your heartwarming feedback!.We are grateful for the love and appreciation you share. It motivates us to provide unforgettable experiences at our hotel.Your kind words mean the world to us. Thank you for the appreciation and for allowing us to serve you during your stay. It’s our guests’ appreciation that keeps our spirits high. Thank you for your wonderful reviews they inspire us to deliver the best!</p>
+                </div>
+                <div class="profile">
+                    <img src="./images/profile.jpg" alt="profile">
+                    <p id="name">JERISHA J  <span id="name1">Co-Founder ,Trips Around</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container6" id="Collections">
+        <div class="frame1">
+            <p>Where to next?</p>
+            <h3>Handpicked Collections for You</h3>
+        </div>
+        <div class="images">
+            <div class="box">
+                <img src="./images/slide1.jpg" alt="">
+                <div class="book">
+                    <h1>India</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide2.jpg" alt="">
+                <div class="book">
+                    <h1>France</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide3.jpg" alt="">
+                <div class="book">
+                    <h1> Australia</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide4.jpeg" alt="">
+                <div class="book">
+                    <h1>Switzerland</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide5.jpg" alt="">
+                <div class="book">
+                    <h1> Dubai</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide6.jpg" alt="">
+                <div class="book">
+                    <h1>China</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide7.jpg" alt="">
+                <div class="book">
+                    <h1>Norway</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide8.jpg" alt="">
+                <div class="book">
+                    <h1>Singapore</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide9.jpg" alt="">
+                <div class="book">
+                    <h1>Japan</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide10.jpg" alt="">
+                <div class="book">
+                    <h1>Iceland</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide11.jpg" alt="">
+                <div class="book">
+                    <h1>Maldives</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide13.jpg" alt="">
+                <div class="book">
+                    <h1> Spain</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide12.jpg" alt="">
+                <div class="book">
+                    <h1>Mexico</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide14.jpg" alt="">
+                <div class="book">
+                    <h1>Italy</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+            <div class="box">
+                <img src="./images/slide15.jpg" alt="">
+                <div class="book">
+                    <h1>Germany</h1>
+                    <button>Book now</button>
+                </div>
+            </div>
+        </div>
+    </div>  
+    <footer>
+      <div class="footer_content" id="contant1">
+        <img src="./images/logo.png" alt="logo">
+      </div>
+      <div class="footer_content" id="contant2">
+        <h4>Information</h4>
+        <p><ul>
+            <li>
+                <a href="#">About Us</a>
+            </li>
+            <li>
+                <a href="#">More Search</a>
+            </li>
+            <li>
+                <a href="#">Testimonial</a>
+            </li>
+            <li>
+                <a href="#">Event</a></p>
+            </li>
+        </ul>
+      </div>
+      <div class="footer_content" id="contant3">
+        <h4>Helpful Links</h4>
+        <p><ul>
+            <li>
+                <a href="#">Destination</a>
+            </li>
+            <li>
+                <a href="#">Supports</a>
+            </li>
+            <li>
+                <a href="#">Terms & Condition</a>
+            </li>
+            <li>
+                <a href="#">Privacy</a>
+            </li>
+        </ul>
+        </p>
+      </div>
+      <div class="footer_content" id="contant4">
+        <h4>Contact</h4>
+        <p>
+            <ul>
+                <li>
+                    tripsaround@gmail.com 
+                </li>
+                <li>
+                    +91 2378347874</p>
+                </li>
+            </ul>
+      </div>
+      <div class="footer-content" id="contant5">
+        <i class="fa-brands fa-facebook"></i>
+        <i class="fa-brands fa-instagram"></i>
+        <i class="fa-brands fa-twitter"></i>
+      </div>
+    </footer>
+</body>
+</html>
